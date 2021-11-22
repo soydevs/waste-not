@@ -1,0 +1,15 @@
+.vision {
+    height: calc(100vh - 90px);
+    background-color: var(--primary-bg);
+}
+
+.vision__container {
+    padding: 3rem 4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.vision__wave {
+    height: 100%;
+}

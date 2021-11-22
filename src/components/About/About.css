@@ -1,0 +1,66 @@
+.about {
+    height: calc(100vh - 90px);
+    padding: 3rem 4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--primary-bg);
+}
+
+.about__left {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.85rem;
+}
+
+.about__left h1 {
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.325rem;
+    letter-spacing: 0.02em;
+    color: var(--primary-color);
+}
+
+.about__left p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+    color: var(--primary-font);
+    width: 55%;
+    margin-bottom: 1rem;
+}
+
+.std_button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: #22DB8A;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: #F1F1F1;
+}
+
+.about__right {
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about__right > img {
+    width: 60%;
+}
