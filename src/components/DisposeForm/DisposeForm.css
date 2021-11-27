@@ -1,0 +1,84 @@
+.dispose__container {
+    font-family: var(--primary-font);
+    background-color: #f1f1f1;
+    
+    padding: 20px;
+    width: 50%;
+    position: relative;
+}
+.dispose__container > svg {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    width: 250px;
+    height: 250px;
+    z-index: 1;
+}
+.dispose__container > h2 {
+    margin-left: 25px;
+    margin-top: 40px;
+    margin-bottom: 29px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    color: #22DB8A;
+}
+.dispose__form {
+    margin: 20px 40px;
+    z-index: 2;
+}
+.dispose__form > div {
+    margin-bottom: 20px;
+}
+.dispose__form > div > label {
+    display: block;
+    margin-bottom: 5px;
+}
+.dispose__form > div > input {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+.qty {
+    display: inline !important;
+    width: 9% !important;
+    margin-right: 13px;
+    text-align: center;
+}
+.dispose__form > div > select {
+    display: block;
+    width: 70%;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+.dispose__form > div > textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+.dispose__form__controls {
+    text-align: right;
+}
+.dispose__control__add {
+    background-color: #22DB8A;
+    color: #f1f1f1;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    padding: 7px 15px;
+    font-weight: bold;
+}
+.dispose__control__cancel {
+    border: 2px solid skyblue;
+    outline: none;
+    color: skyblue;
+    margin-right: 10px;
+    outline: none;
+    padding: 5px 10px;
+    font-weight: bold;
+}

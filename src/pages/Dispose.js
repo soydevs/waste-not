@@ -1,6 +1,7 @@
 // import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
+import { DisposeForm } from "../components";
 import PriceCard from "../components/PriceCard/PriceCard";
 
 const priceItems = [
@@ -83,6 +84,7 @@ const Dispose = () => {
             </div>
             ))}
             </div>
+        <DisposeForm/>
     </div>
   );
 };

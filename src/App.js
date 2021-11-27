@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import { Home, FourNotFour, Dispose } from './pages';
 import { Signup } from './components';
+import PrivateRoute from "./utils/PrivateRoute";
 
 function App() {
   return (
