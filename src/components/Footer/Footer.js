@@ -12,7 +12,7 @@ export default function Footer() {
         </div>
         <section className="footer__row">
             <div>
-                <div>
+                <div className="footer__details">
                     <h3>Services</h3>
                     <h5>Our Story</h5>
                     <h5>Benefits</h5>
@@ -21,7 +21,7 @@ export default function Footer() {
                 </div>
             </div>
             <div>
-                <div>
+                <div className="footer__details">
                     <h3>Services</h3>
                     <h5>Our Story</h5>
                     <h5>Benefits</h5>
@@ -30,7 +30,7 @@ export default function Footer() {
                 </div>
             </div>
             <div>
-                <div>
+                <div className="footer__details">
                     <h3>Services</h3>
                     <h5>Our Story</h5>
                     <h5>Benefits</h5>
@@ -39,13 +39,14 @@ export default function Footer() {
                 </div>
             </div>
             <div>
-                <div>
+                <div className="footer__details footer__subscribe">
                     <h4>SUBSCRIBE NOW</h4>
-                    <input type="email" name="email"></input>
+                    <input placeholder="email@xyz.com" type="email" name="email"></input>
                     <button>SEND</button>
                 </div>
             </div>
         </section>
+        <div className="footer__copyright">@2021 soydevs</div>
     </div>
     </>)
 }
