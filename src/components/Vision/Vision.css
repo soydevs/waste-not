@@ -1,38 +1,37 @@
 .vision {
-    /* height: calc(100vh - 90px); */
-    background-color: var(--primary-bg);
+  /* height: calc(100vh - 90px); */
+  background-color: var(--primary-bg);
 }
 
 .vision__container {
-    padding: 3rem 4rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    background-color: #22d88a;
-    color: #f1f1f1;
-    font-family: var(--primary-font);
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #22d88a;
+  color: #f1f1f1;
+  font-family: var(--primary-font);
 }
 
 .vision__container > div {
-    border-right: 2px solid #f1f1f1;
-    border-left: 2px solid #f1f1f1;
-    padding-left: 4px;
+  border-right: 2px solid #f1f1f1;
+  border-left: 2px solid #f1f1f1;
+  padding-left: 4px;
 }
 
 .vision__container > div > h3 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .vision__container > div > p {
-    
-    text-align: center;
+  text-align: center;
 }
 .vision__container > div:nth-of-type(1) {
-    border-left: 0 !important;
+  border-left: 0 !important;
 }
 .vision__container > div:nth-of-type(4) {
-    border-right: 0 !important;
+  border-right: 0 !important;
 }
 
 /* .vision__wave {
@@ -41,14 +40,12 @@
     background-color: var(--primary-bg);
 } */
 
-.vision__wave > h1 {
+/* .vision__wave > h1 {
     margin-left: 25px;
     margin-bottom: 20px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
     color: #22DB8A;
-}
+} */
 /* Vector */
-
-
