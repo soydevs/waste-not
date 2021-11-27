@@ -1,0 +1,33 @@
+#impacts > h1 {
+    margin-left: 25px;
+    margin-top: 40px;
+    margin-bottom: 29px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    color: #22DB8A;
+
+}
+.cover_img {
+    width: 30%;
+    height: 200px;
+    background-color: var(--primary-bg);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 0 30px;
+}
+.row:nth-of-type(2n) {
+    flex-direction: row-reverse;
+}
+
+.row > p {
+    width: 70%;
+    padding: 60px;
+    font-family: var(--primary-font);
+}

@@ -1,0 +1,38 @@
+#contribute {
+    font-family: var(--primary-font);
+}
+#contribute > h1 {
+    margin-left: 25px;
+    margin-top: 40px;
+    margin-bottom: 29px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    color: #22DB8A;
+}
+.contribute__cards {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    gap: 20px;
+}
+.cover {
+    height: 400px;
+    background-color: #22d88a;
+    margin-bottom: 60px;
+}
+.card:nth-of-type(2) {
+    text-align: right;
+}
+.card:nth-of-type(1) > p {
+    padding-right: 20px;
+}
+.card:nth-of-type(2) > p {
+    padding-left: 20px;
+}
+.card > button {
+    margin-top: 30px;
+}
