@@ -1,20 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import './App.css';
-import { Home } from './pages';
+import { Home } from "./pages";
+import Dispose from "./pages/Dispose";
+import FourNotFour from "./pages/FourNotFour";
+import "./App.css";
 
 function App() {
   return (
-    <div>
-        <Router>
-          <Routes>
-            <Route path='/' element={<Home/>} exact/>
-
-
-            {/* <Route component={FourNotFour} /> */}
-          </Routes>
-        </Router>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='/dispose' element={<Dispose />} />
+        <Route path='*' element={<FourNotFour />} />
+      </Routes>
+    </Router>
   );
 }
 
