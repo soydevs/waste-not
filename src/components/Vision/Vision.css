@@ -14,8 +14,8 @@
 }
 
 .vision__container > div {
-  border-right: 2px solid black;
-  border-left: 2px solid black;
+  border-right: 2px solid #f1f1f1;
+  border-left: 2px solid #f1f1f1;
   padding-left: 4px;
 }
 
@@ -36,7 +36,7 @@
 
 /* .vision__wave {
     height: 200px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+    cubic-bezier(0.1, 0.7, 1.0, 0.1);
     background-color: var(--primary-bg);
 } */
 

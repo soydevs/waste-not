@@ -6,12 +6,17 @@
     font-style: normal;
     font-weight: 600;
     color: #22DB8A;
-
 }
 .cover_img {
     width: 30%;
     height: 200px;
-    background-color: var(--primary-bg);
+    
+    text-align: center;
+}
+
+.cover_img > img {
+    height: 200px;
+    width: 200px;
 }
 
 .row {
