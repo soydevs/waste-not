@@ -39,7 +39,7 @@ function SignUp() {
                 name,
                 phone
             }
-            const response = await requestHandler('POST', '/auth/signup', data);
+            const response = await requestHandler('POST', '/auth/user/signup', data);
             handleResponse(response);
         }
         else {
@@ -49,7 +49,7 @@ function SignUp() {
 
     const handleResponse = (response) => {
         if(response.success) 
-            navigate('/login')
+            navigate('/')
         else {
             setErrorMsg(response.message)
             timeout = setTimeout(()=>{

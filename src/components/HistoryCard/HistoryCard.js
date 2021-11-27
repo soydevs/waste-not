@@ -28,7 +28,6 @@ const HistoryCard = ({ item }) => {
       </div>
       <div>
         <h4 className='text-darken-2 grey-text'>{itemName}</h4>
-
         <p>
           <b>Price: </b>
           {price}/{unit}

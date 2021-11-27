@@ -7,5 +7,6 @@ export { default as Footer } from "./Footer/Footer";
 export { default as Signup } from "./auth/SignUp/SignUp";
 export { default as Login } from "./auth/Login/Login";
 export { default as Profile } from "./auth/Profile/Profile";
+export { default as DisposeForm } from "./DisposeForm/DisposeForm";
 export { default as HistoryCard } from "./HistoryCard/HistoryCard";
 export { default as PriceCard } from "./PriceCard/PriceCard";
