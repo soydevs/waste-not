@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, About, Vision, Contribute, Impact } from '../components'
+import { Navbar, About, Vision, Contribute, Impact, Footer } from '../components'
 
 
 
@@ -11,6 +11,7 @@ function Home() {
             <Vision />
             <Contribute/>
             <Impact/>
+            <Footer/>
         </div>
     )
 }
