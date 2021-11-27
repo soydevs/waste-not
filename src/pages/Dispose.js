@@ -1,7 +1,6 @@
-import { useEffect } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import PriceCard from "../components/PriceCard/PriceCard";
 
 const priceItems = [
@@ -58,9 +57,8 @@ const Dispose = () => {
   // }, []);
   return (
     <div className='container'>
-      <section>
-        <h3>Today's Prices</h3>
-        {/* <div class='carousel'>
+      <h3>Today's Prices</h3>
+      {/* <div class='carousel'>
           <a class='carousel-item' href='#three!'>
             <img src='https://lorempixel.com/250/250/nature/3' />
           </a>
@@ -68,22 +66,23 @@ const Dispose = () => {
             <img src='https://lorempixel.com/250/250/nature/4' />
           </a> */}
 
-        {/* {priceItems.map((item) => (
+      {/* {priceItems.map((item) => (
             <PriceCard key={item.id} item={item} />
           ))} */}
-        {/* </div> */}
+      {/* </div> */}
 
-        <Slider {...settings}>
+      {/* <Slider {...settings}>
           {priceItems.map((item) => (
             <PriceCard key={item.id} item={item} />
           ))}
-        </Slider>
-        {/* <div class='carousel '>
-          {priceItems.map((item) => (
+        </Slider> */}
+      <div className='row'>
+        {priceItems.map((item) => (
+          <div className='col s12. m4'>
             <PriceCard key={item.id} item={item} />
-          ))}
-        </div> */}
-      </section>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
