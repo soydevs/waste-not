@@ -63,7 +63,12 @@
 }
 .footer__copyright {
     text-align: center;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 0;
     margin-top: 5px;
+}
+.footer__copyright > span {
+    margin-bottom: 3px;
 }

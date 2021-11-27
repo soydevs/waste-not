@@ -46,7 +46,7 @@ export default function Footer() {
                 </div>
             </div>
         </section>
-        <div className="footer__copyright">@2021 soydevs</div>
+        <div className="footer__copyright"><span>@</span>2021 soydevs</div>
     </div>
     </>)
 }

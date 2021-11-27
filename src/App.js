@@ -1,17 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import './App.css';
-import { Home } from './pages';
+import { Home, FourNotFour, Dispose } from './pages';
+import { Signup } from './components';
 
 function App() {
   return (
     <div>
         <Router>
           <Routes>
-            <Route path='/' element={<Home/>} exact/>
-
-
-            {/* <Route component={FourNotFour} /> */}
+            <Route exact path='/' element={<Home/>} />
+            <Route path='/signup' element={<Signup/>}/>
+            <Route path='/dispose' element={<Dispose />} />
+            <Route path='*' element={<FourNotFour />} />
           </Routes>
         </Router>
     </div>

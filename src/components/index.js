@@ -4,3 +4,6 @@ export { default as Vision } from './Vision/Vision';
 export { default as Contribute } from './Contribute/Contribute';
 export { default as Impact } from './Impact/Impact';
 export { default as Footer } from './Footer/Footer';
+export { default as Signup } from './auth/SignUp/SignUp';
+export { default as Login } from './auth/Login/Login';
+export { default as Profile } from './auth/Profile/Profile';

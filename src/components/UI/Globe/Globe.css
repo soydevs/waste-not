@@ -1,0 +1,187 @@
+.spin-container{
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    --scale: 2.5;
+    display: inline-block;
+    animation: spin 40s linear infinite both; 
+}
+
+  @keyframes spin{
+    0%{
+      transform: scale(var(--scale)) rotate(0deg);
+    }
+    100%{
+      transform: scale(var(--scale)) rotate(360deg);
+    }
+}
+
+.circle {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle.outer{
+    --size: 500px;
+    background: #FDEFED;
+}
+.circle.middle{
+    position: relative;
+    --size: 400px;
+    background: #FAC2BC;
+    
+}
+.circle.inner{
+    --size: 300px;
+    z-index: 2;
+    background: rgb(255,231,227);
+    background: radial-gradient(circle, rgba(255,231,227,1) 25%, rgba(241,151,140,1) 100%);
+    
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+.ls__img {
+    --angle: 0deg;
+    --y: -180px;
+    position: absolute;
+    transition: transform 0.3s;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+  
+
+
+
+
+.ls_img1 {
+    --angle: 0deg;
+    --y: -170px;
+    transform: rotate(var(--angle)) translateY(var(--y));
+    width: 100px;
+}
+
+.ls_img2 {
+    --y: -175px;
+    --angle: 60deg;
+    transform: rotate(var(--angle)) translateY(var(--y));
+    width: 100px;
+}
+
+.ls_img3 {
+    --angle: 120deg;
+    transform: rotate(var(--angle)) translateY(var(--y));
+    width: 100px;
+}
+
+.ls_img4 {
+    --angle: 180deg;
+    transform: rotate(var(--angle)) translateY(var(--y));
+    width: 100px;
+}
+
+.ls_img5 {
+    --angle: 240deg;
+    transform: rotate(var(--angle)) translateY(var(--y));
+    width: 100px;
+}
+
+.ls_img6 {
+    --angle: 300deg;
+    transform: rotate(var(--angle)) translateY(var(--y));
+    width: 100px;
+}
+
+
+@media (min-width: 992px) {
+    .spin-container:hover{
+        animation-play-state: paused;
+    }
+    .ls__img:hover{
+        transform: rotate(var(--angle)) translateY(calc(var(--y) - 20px)) scale(1.1);
+    }
+    .spin-container{
+        --scale: 2;
+    }
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    .spin-container{
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        --scale: 2;
+        display: inline-block;
+        animation: spin 40s linear infinite both; 
+        z-index: 0;
+    }
+      @keyframes spin{
+        0%{
+          transform: translateX(-50%) scale(var(--scale)) rotate(0deg);
+        }
+        100%{
+          transform: translateX(-50%) scale(var(--scale)) rotate(360deg);
+        }
+    }
+
+    .ls_img1 {
+        width: 80px;
+    }
+    
+    .ls_img2 {
+        width: 80px;
+    }
+    
+    .ls_img3 {
+        width: 80px;
+    }
+    
+    .ls_img4 {
+        width: 80px;
+    }
+    
+    .ls_img5 {
+        width: 80px;
+    }
+    
+    .ls_img6 {
+        width: 80px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 400px) {
+
+}
+  
+@media only screen and (min-device-width: 320px) and (max-device-width: 
+  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+
+}
+
+
+@media only screen and (device-width: 768px) {
+
+}

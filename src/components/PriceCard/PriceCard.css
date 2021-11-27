@@ -1,0 +1,100 @@
+/* .priceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.priceCard h1 {
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.85rem;
+  color: var(--text-primary);
+}
+
+.priceCard__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.priceCard__container::-webkit-scrollbar {
+  display: none;
+}
+
+.priceCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(169, 206, 226, 0.5);
+  border-radius: 20px;
+  width: 135px;
+  height: 50px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.priceCardCard img {
+  width: 40px;
+  height: 40px;
+}
+
+.priceCard h3 {
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #2a5e7c;
+}
+
+@media (min-width: 992px) and (max-width: 1380px) {
+}
+
+@media screen and (max-width: 992px) {
+  .priceCard {
+    margin-top: 2rem;
+  }
+  .priceCard h1 {
+    font-size: 1.65rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .priceCard h1 {
+    font-size: 1.55rem;
+  }
+  .priceCardCard {
+    width: 120px;
+    height: 45px;
+  }
+  .priceCardCard img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .priceCardCard h3 {
+    font-size: 1.05rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 400px) {
+} */
+
+.carousel-item {
+  /* max-width: 50vw; */
+}
