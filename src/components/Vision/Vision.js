@@ -40,31 +40,29 @@ function Vision() {
         </div>
         <div className='vision__container'>
           <div>
-            <h3>Discover</h3>
+            <h3>Collection</h3>
             <p>
-              changemakers and get inspired by their powerful intervention
-              models
+            Waste collection units to be built within a 25km radius, where segregated waste can be dumped by volunteers
             </p>
           </div>
           <div>
-            <h3>Discover</h3>
+            <h3>Marketplace</h3>
             <p>
-              changemakers and get inspired by their powerful intervention
-              models
+            Virtual marketplace where dumped scrap metal and other electronics can be bought at minimal prices from the app
             </p>
           </div>
           <div>
-            <h3>Discover</h3>
+            <h3>Portal</h3>
             <p>
-              changemakers and get inspired by their powerful intervention
-              models
+            Portal to buy decompost tools and equipment (for consumers).
+Portal to sell compost, organic materials (for sellers).
+
             </p>
           </div>
           <div>
-            <h3>Discover</h3>
+            <h3>Buy/Sell</h3>
             <p>
-              changemakers and get inspired by their powerful intervention
-              models
+            Dedicated page for buying and selling clean plastic where the house-owners can alert and volunteers can collect them.
             </p>
           </div>
         </div>

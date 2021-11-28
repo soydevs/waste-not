@@ -50,3 +50,11 @@ In a state like Kerala, it is commonly seen in the news about how wastes are get
 
 - Improve the quality of Environment.
 - Sustainable source of waste disposal
+
+## Steps to run locally:
+- clone the repo
+- use 2 terminals
+- run `cd waste-not` on both
+- run `cd waste-not-backend` in one terminal
+- run `npm install` on both terminals
+- run `npm run start` on both terminals

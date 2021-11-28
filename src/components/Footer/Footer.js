@@ -1,7 +1,7 @@
 import './Footer.css';
 export default function Footer() {
     return (<>
-    <div className="footer" id="footer">
+    <div className="footer" id="contact">
         <div className="footer__row">
             <h1>WASTE NOT</h1>
             <ul>
