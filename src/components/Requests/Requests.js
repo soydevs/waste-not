@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { DisposeForm } from "../";
 import { AuthContext } from "../../context/AuthContext";
 import requestHandler from "../../hooks/requestHandler";
+import { images } from '../../utils/data';
 import './Requests.css';
 const sample = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/unicorn.jpg"
 
@@ -54,13 +55,13 @@ export default function Requests() {
             <div className="requests__container">
                 {requests.map(exp => (
                     <div className="requestCard" key={exp.id}>
-                        <img src={sample} alt="" />
+                        <img src={images[exp.type.toLowerCase()]?images[exp.type.toLowerCase()]:sample} alt="" />
                         <div>
                             <h3>{exp.type}</h3>
                             <p><span>Price: </span>{exp.price}</p>
                             <p><span>Quantity: </span>{exp.quantity}</p>
-                            <p><span>Date Sold: </span>{Date(exp.createdAt)}</p>
-                            <p><span>Total Saved: </span>Rs 700</p>
+                            <p><span>Date: </span>{Date(exp.createdAt)}</p>
+                            <p><span>Total Saved: </span>{exp.price} x {exp.quantity}</p>
                         </div>
                     </div>
                 ))}

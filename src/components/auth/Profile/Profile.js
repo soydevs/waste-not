@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { HiPencil, HiOutlineUserCircle, HiOutlineCake, HiOutlinePhone, HiOutlineMail, HiOutlineLocationMarker, HiOutlinePencil, HiOutlineTemplate } from "react-icons/hi";
+import { HiPencil, HiOutlineUserCircle,  HiOutlinePhone, HiOutlineMail, HiOutlineLocationMarker,  HiOutlineTemplate } from "react-icons/hi";
 import './Profile.css'
 import { AuthContext } from '../../../context/AuthContext'
 import requestHandler from '../../../hooks/requestHandler';

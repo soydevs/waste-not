@@ -1,6 +1,6 @@
 import "./DisposeForm.css";
 import largeLeaf from "../../assets/svg/largeLeaf.svg";
-import { useContext, useRef, useState } from "react";
+import { useContext,  useState } from "react";
 import requestHandler from "../../hooks/requestHandler";
 import { AuthContext } from "../../context/AuthContext";
 

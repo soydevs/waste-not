@@ -31,7 +31,7 @@ function VolunteerSignup() {
         setHidden(!hidden)
     }
 
-    const { handleUser, handleToken, handleName } = useContext(AuthContext);
+    // const { handleUser, handleToken, handleName } = useContext(AuthContext);
 
     
     const handleSignup = async (e) => {
@@ -59,7 +59,7 @@ function VolunteerSignup() {
     const handleResponse = (response) => {
         if(response.success) {
             setTimeout(()=>{
-                history('/volunteer/home');
+                history('/volunteer/login');
                 window.location.reload()
             }, 1000)
         }
