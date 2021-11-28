@@ -9,16 +9,20 @@ const PrivateRoute = ({ element: RouteComponent, ...rest}) => {
 
     return (
         <Route
-            {...rest}
-            render={routeProps => 
-                !!currentUser ? (
-                    <RouteComponent {...routeProps} />
-                ) : (
-                    <Navigate to={"/login"} />
-                   
-                )
-            }
+    {...rest}
+    render={props =>
+      currentUser ? (
+        <RouteComponent {...props} />
+      ) : (
+        <Navigate
+          to={{
+            pathname: "/login",
+            state: { from: props.location }
+          }}
         />
+      )
+    }
+  />
     )
 }
 

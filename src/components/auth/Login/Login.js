@@ -15,7 +15,7 @@ function Login() {
     var timeout;
     const [hidden, setHidden] = useState(true)
 
-    const { handleUser, handleToken, handleName } = useContext(AuthContext);
+    // const { handleUser, handleToken, handleName } = useContext(AuthContext);
 
     const history = useNavigate()
 
@@ -32,7 +32,7 @@ function Login() {
             if(phone)   data = { 'phone':username, password } 
             else data = { username, password }
 
-            const response = await requestHandler('POST', '/auth/login', data);
+            const response = await requestHandler('POST', '/auth/user/login', data);
             handleResponse(response);
         }
         else {
@@ -42,10 +42,10 @@ function Login() {
 
     const handleResponse = (response) => {
         if(response.success) {
-            handleUser(response.data.user)
-            handleToken(response.data.token)
-            handleName(response.data.user.name)
-            history.push('/home')
+            // handleUser(response.data.user)
+            // handleToken(response.data.token)
+            // handleName(response.data.user.name)
+            history('/dispose')
         }
         else {
             setErrorMsg(response.message)

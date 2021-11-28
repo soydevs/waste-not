@@ -18,8 +18,7 @@ function SignUp() {
 
     var timeout;
     const navigate = useNavigate()
-    const obj = useContext(AuthContext);
-    const currentUser = obj?.currentUser || null
+    const { currentUser }  = useContext(AuthContext);
 
     if (currentUser) {
         navigate('/')

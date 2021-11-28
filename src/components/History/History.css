@@ -1,0 +1,139 @@
+.history {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.history h1 {
+        margin-left: 25px;
+        margin-top: 40px;
+        margin-bottom: 29px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        color: #22DB8A; 
+}
+
+.history__container {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 2rem;
+    padding: 0 20px;
+    height: 450px;
+     -ms-overflow-style: none;  
+    scrollbar-width: none; 
+    
+}
+.history__container::-webkit-scrollbar {
+    display: none;
+}
+
+.historyCard {
+    display: flex;
+    height: 200px;
+    width: 450px;
+    align-items: flex-start;
+    padding: 0.74rem;
+    background: #F3F5F7;
+    box-shadow: -3px -3px 6px #FFFFFF, 3px 3px 6px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    flex-shrink: 0;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.historyCard img {
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+}
+
+.historyCard h3 {
+    font-size: 18px;
+    align-items: center;
+    letter-spacing: 0.01em; 
+    color: var(--text-primary);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.historyCard > div > p {
+    font-size: 12px;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: rgba(85, 85, 85, 0.6);
+    margin-top: -0.25rem;
+    margin-top: 5px;
+}
+.historyCard > div > p:nth-of-type(4) > span {
+    font-weight: bold;
+}
+
+.historyCard > div > p > span {
+    font-size: 12px;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: rgba(85, 85, 85, 0.6);
+    margin-top: -0.25rem;
+}
+
+.historyCard > div {
+    margin-left: 20px;
+}
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .history {
+        margin-top: 2rem;
+    }
+    .history h1 {
+        font-size: 1.65rem;
+    }
+    
+    
+}
+
+@media screen and (max-width: 800px) {
+    .history h1 {
+        font-size: 1.55rem;
+    }
+    .historyCard img {
+        border-radius: 10px;
+        /* width: 120px;
+        height: 100px; */
+    }
+    .historyCard h3 {
+        font-size: 17px;
+    }
+    .historyCard p {
+        font-size: 11px;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    
+    
+}
+
+@media screen and (max-width: 400px) {
+
+} 

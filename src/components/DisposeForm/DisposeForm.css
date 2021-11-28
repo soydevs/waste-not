@@ -1,12 +1,12 @@
 .dispose__container {
-  font-family: var(--primary-font);
+  font-family: var(--primary-font) !important;
   background-color: #f1f1f1;
   margin: auto;
   padding: 20px;
   width: 50%;
   position: relative;
 }
-.dispose__container > svg {
+.dispose__container > img {
   position: absolute;
   top: 40px;
   right: 20px;
@@ -18,7 +18,7 @@
   margin-left: 25px;
   margin-top: 40px;
   margin-bottom: 29px;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   color: #22db8a;
@@ -54,6 +54,9 @@
   outline: none;
   border: none;
 }
+.dispose__form > div:nth-of-type(1) > select {
+    width: 50%;
+  }
 .dispose__form > div > textarea {
   display: block;
   width: 100%;

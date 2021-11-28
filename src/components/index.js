@@ -10,3 +10,6 @@ export { default as Profile } from "./auth/Profile/Profile";
 export { default as DisposeForm } from "./DisposeForm/DisposeForm";
 export { default as HistoryCard } from "./HistoryCard/HistoryCard";
 export { default as PriceCard } from "./PriceCard/PriceCard";
+export { default as Items } from './Items/Items';
+export { default as History } from './History/History';
+export { default as Requests } from './Requests/Requests';
