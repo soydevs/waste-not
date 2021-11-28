@@ -37,13 +37,13 @@ function Navbar() {
                         <NavHashLink to="/#vision" smooth activeClassName="nav__active" className="nav__item">
                             <span>Our Vision</span> 
                         </NavHashLink>
-                        <NavHashLink to="/" smooth activeClassName="nav__active" className="nav__item">
+                        <NavHashLink to="/#impacts" smooth activeClassName="nav__active" className="nav__item">
                             <span>Impacts</span> 
                         </NavHashLink>
-                        <NavHashLink to="/" smooth activeClassName="nav__active" className="nav__item">
+                        <NavHashLink to="/#contribute" smooth activeClassName="nav__active" className="nav__item">
                             <span>Contribute</span> 
                         </NavHashLink>
-                        <NavHashLink to="/" smooth activeClassName="nav__active" className="nav__item">
+                        <NavHashLink to="/#contact" smooth activeClassName="nav__active" className="nav__item">
                             <span>Contact</span> 
                         </NavHashLink>
                     </div>

@@ -13,17 +13,29 @@
 .contribute__cards {
     padding: 40px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    justify-items: center;
     align-content: center;
     gap: 35px;
 }
+.card {
+    width: 50%;
+}
+
 .cover {
     height: 400px;
-    background-color: #22d88a;
+    background-color: #22d8898e;
     margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.cover > img {
+    object-fit: cover;
+    width: 320px;
+    pointer-events: none;
+}
+
 .card:nth-of-type(2) {
     text-align: right;
 }
@@ -32,7 +44,4 @@
 }
 .card:nth-of-type(2) > p {
     padding-left: 20px;
-}
-.card > button {
-    margin-top: 30px;
 }
