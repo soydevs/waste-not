@@ -50,7 +50,10 @@ function Login() {
             handleUser(response.data.user)
             handleToken(response.data.token)
             handleName(response.data.user.name)
-            navigate('/dispose')
+            setTimeout(()=>{
+                navigate('/dispose');
+                window.location.reload()
+            }, 1000)
         }
         else {
             setErrorMsg('Try again!')

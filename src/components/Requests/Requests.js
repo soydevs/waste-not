@@ -1,6 +1,7 @@
 import { Modal } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { DisposeForm } from "../";
+import { AuthContext } from "../../context/AuthContext";
 import requestHandler from "../../hooks/requestHandler";
 import './Requests.css';
 const sample = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/unicorn.jpg"
@@ -11,59 +12,12 @@ export default function Requests() {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    const reqs = [
-        {
-            id: 1,
-            title: 'Kuttanad',
-            subtitle: 'Backwater',
-            amount:'Rs 200',
-            date:'20/3/2021',
-            saved:'150 X 5kg = Rs 750',
-            image: sample
-        },
-        {
-            id: 2,
-            title: 'Jaipur',
-            subtitle: 'Ride',
-            amount:'Rs 200',
-            date:'20/3/2021',
-            saved:'150 X 5kg = Rs 750',
-            image: sample
-        },
-        {
-            id: 3,
-            title: 'Agra',
-            subtitle: 'Historic',
-            amount:'Rs 200',
-            date:'20/3/2021',
-            saved:'150 X 5kg = Rs 750',
-            image: sample
-        },
-        {
-            id: 4,
-            title: 'Chennai',
-            subtitle: 'Place',
-            amount:'Rs 200',
-            date:'20/3/2021',
-            saved:'150 X 5kg = Rs 750',
-            image: sample
-        },
-        {
-            id: 5,
-            title: 'Rajasthan',
-            subtitle: 'Place',
-            amount:'Rs 200',
-            date:'20/3/2021',
-            saved:'150 X 5kg = Rs 750',
-            image: sample
-        },
-        
-    ]
+    const {token} = useContext(AuthContext);
 
     const [requests, setRequests] = useState([])
 
     const getData = () => {
-        requestHandler('GET', '/dispose').then((res)=>{
+        requestHandler('GET', '/dispose', undefined, token).then((res)=>{
             if(res.success) {
                 if(res.data.requests.length)
                     setRequests(res.data.requests)

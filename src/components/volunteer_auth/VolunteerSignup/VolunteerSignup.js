@@ -58,7 +58,10 @@ function VolunteerSignup() {
 
     const handleResponse = (response) => {
         if(response.success) {
-            history('/volunteer/login')
+            setTimeout(()=>{
+                history('/volunteer/home');
+                window.location.reload()
+            }, 1000)
         }
         else {
             alert('Try again!')

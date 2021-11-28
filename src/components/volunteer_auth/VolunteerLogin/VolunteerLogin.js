@@ -49,7 +49,10 @@ function VolunteerLogin() {
             handleUser(response.data.volunteer)
             handleToken(response.data.token)
             handleName(response.data.volunteer.name)
-            history('/volunteer/home')
+            setTimeout(()=>{
+                history('/volunteer/home');
+                window.location.reload()
+            }, 1000)
         }
         else {
             setErrorMsg('Try again!')

@@ -8,6 +8,8 @@ import './Navbar.css'
 function Navbar() {
     const navigate = useNavigate()
 
+    // const {handleLogout} = useContext(AuthContext);
+
     const handleLogout = () => {
         
         localStorage.removeItem('wasteNotUser')
@@ -18,7 +20,10 @@ function Navbar() {
 
     const logout = () => {
         handleLogout();
-        navigate('/');
+        setTimeout(()=>{
+            navigate('/');
+            window.location.reload()
+        }, 1000)
     }
     return (
         <div className="navbar">
@@ -50,7 +55,7 @@ function Navbar() {
                     <Link to="/volunteer/home">
                         <button className="navBtn nav_volunteer">Volunteer</button>
                     </Link>
-                    <button className="navBtn nav_volunteer" onClick={handleLogout}>Logout</button>
+                    <button className="navBtn nav_volunteer" onClick={logout}>Logout</button>
                 </div> 
             </div>
         </div>

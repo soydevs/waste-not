@@ -52,7 +52,10 @@ function SignUp() {
             handleUser(response.data.user)
             handleToken(response.data.token)
             handleName(response.data.user.name)
-            navigate('/')
+            setTimeout(()=>{
+                navigate('/dispose');
+                window.location.reload()
+            }, 1000)
         }
         else {
             setErrorMsg(response.message)

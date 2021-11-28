@@ -1,9 +1,12 @@
 import "./DisposeForm.css";
 import largeLeaf from "../../assets/svg/largeLeaf.svg";
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import requestHandler from "../../hooks/requestHandler";
+import { AuthContext } from "../../context/AuthContext";
 
 export default function DisposeForm({ onClose, onAdd }) {
+
+    const {token} = useContext(AuthContext);
 
     const handleAdd = async (e) => {
         e.preventDefault()
@@ -14,8 +17,8 @@ export default function DisposeForm({ onClose, onAdd }) {
         let data={
             type, quantity:qty, availableTime:timeSlot, description, address:'Somewhere under blue sky', pincode:'123456'
         }
-        console.log([type, qty, timeSlot, description])
-        const res = await requestHandler('POST', '/dispose', data);
+        
+        const res = await requestHandler('POST', '/dispose', data, token);
         if(res.success) onAdd()
         else alert("Try again!")
     };

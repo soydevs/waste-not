@@ -14,8 +14,10 @@ const Dispose = () => {
       if(!res.success) {
         navigate('/login')
       }
+    }).catch(()=>{
+      navigate('/login')
     })
-  },[])
+  },[token])
   return (
     <>
     <Navbar/>
