@@ -6,18 +6,23 @@ import { AuthContext } from '../../../context/AuthContext'
 import './Login.css'
 import Globe from '../../UI/Globe/Globe';
 import requestHandler from '../../../hooks/requestHandler';
+import { Navbar } from '../..';
 
 
 function Login() {
-    const [errorMsg, setErrorMsg] = useState('')
+    const [errorMsg, setErrorMsg] = useState(' ')
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     var timeout;
     const [hidden, setHidden] = useState(true)
 
-    // const { handleUser, handleToken, handleName } = useContext(AuthContext);
+    const { handleUser, handleToken, handleName, currentUser } = useContext(AuthContext);
 
-    const history = useNavigate()
+    const navigate = useNavigate()
+
+    if (currentUser) {
+        navigate('/dispose')
+    }
 
     const togglePassView = () => {
         setHidden(!hidden)
@@ -42,15 +47,15 @@ function Login() {
 
     const handleResponse = (response) => {
         if(response.success) {
-            // handleUser(response.data.user)
-            // handleToken(response.data.token)
-            // handleName(response.data.user.name)
-            history('/dispose')
+            handleUser(response.data.user)
+            handleToken(response.data.token)
+            handleName(response.data.user.name)
+            navigate('/dispose')
         }
         else {
-            setErrorMsg(response.message)
+            setErrorMsg('Try again!')
             timeout = setTimeout(()=>{
-                setErrorMsg('')
+                setErrorMsg(' ')
             }, 4000)
         }
     }
@@ -61,7 +66,8 @@ function Login() {
         }
     })
 
-    return (
+    return (<>
+    <Navbar/>
         <div className="login">
             <div className="login__signup__container">
                 <div className="lsc__left">
@@ -102,6 +108,7 @@ function Login() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

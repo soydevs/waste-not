@@ -1,11 +1,25 @@
-import React from 'react'
-
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
 import { NavHashLink } from 'react-router-hash-link';
+import { Link, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../context/AuthContext';
 
 import './Navbar.css'
 
 function Navbar() {
+    const navigate = useNavigate()
+
+    const handleLogout = () => {
+        
+        localStorage.removeItem('wasteNotUser')
+        localStorage.removeItem('wasteNotToken')
+        localStorage.removeItem('wasteNotName')        
+   
+    }
+
+    const logout = () => {
+        handleLogout();
+        navigate('/');
+    }
     return (
         <div className="navbar">
             <div className="navbar__container">
@@ -33,9 +47,10 @@ function Navbar() {
                     <Link to="/dispose">
                         <button className="navBtn nav_dispose">Dispose Waste</button>
                     </Link>
-                    <Link to="/volunteer">
+                    <Link to="/volunteer/home">
                         <button className="navBtn nav_volunteer">Volunteer</button>
                     </Link>
+                    <button className="navBtn nav_volunteer" onClick={handleLogout}>Logout</button>
                 </div> 
             </div>
         </div>

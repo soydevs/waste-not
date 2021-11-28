@@ -13,3 +13,6 @@ export { default as PriceCard } from "./PriceCard/PriceCard";
 export { default as Items } from './Items/Items';
 export { default as History } from './History/History';
 export { default as Requests } from './Requests/Requests';
+export { default as VolunteerSignup } from './volunteer_auth/VolunteerSignup/VolunteerSignup';
+export { default as VolunteerLogin } from './volunteer_auth/VolunteerLogin/VolunteerLogin';
+export { default as ClaimCard } from './volunteerRequestClaimCard/ClaimCard';

@@ -5,6 +5,7 @@ import './SignUp.css'
 import { AuthContext } from '../../../context/AuthContext'
 import Globe from '../../UI/Globe/Globe';
 import requestHandler from '../../../hooks/requestHandler';
+import { Navbar } from '../..';
 
 function SignUp() {
 
@@ -18,10 +19,10 @@ function SignUp() {
 
     var timeout;
     const navigate = useNavigate()
-    const { currentUser }  = useContext(AuthContext);
+    const { currentUser, handleName, handleUser, handleToken }  = useContext(AuthContext);
 
     if (currentUser) {
-        navigate('/')
+        navigate('/dispose')
     }
 
 
@@ -47,8 +48,12 @@ function SignUp() {
     }
 
     const handleResponse = (response) => {
-        if(response.success) 
+        if(response.success) {
+            handleUser(response.data.user)
+            handleToken(response.data.token)
+            handleName(response.data.user.name)
             navigate('/')
+        }
         else {
             setErrorMsg(response.message)
             timeout = setTimeout(()=>{
@@ -65,6 +70,8 @@ function SignUp() {
 
 
     return (
+        <>
+        <Navbar/>
         <div className="signUp">
             <div className="login__signup__container">
                 <div className="lsc__left">
@@ -113,6 +120,7 @@ function SignUp() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

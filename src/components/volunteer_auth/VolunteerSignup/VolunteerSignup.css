@@ -1,0 +1,230 @@
+.volunteerSignup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.signin__left {
+    display: flex;
+    flex: 0.3;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--primary-color);
+    height: 100%;
+    position: relative;
+}
+
+.signin__leftContent {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 2rem 0;
+}
+
+.signin__leftContent img {
+    width: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+
+.signin__leftContent h1 {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 72px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+
+
+.signin__right {
+    display: flex;
+    flex: 0.7;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: #FFFFFF;
+    height: 100%;
+    padding: 2rem;
+}
+
+.signin__right_container {
+    width: 70%;
+    margin: auto;
+}
+
+.signin__right_container h1 {
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+
+.volunteer_input_form {
+    width: 100%;
+    margin: 0 auto;
+    background: #ECF3F8;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+
+.signin__inputContainer {
+    width: 100%;
+    margin: 0.8rem 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.signin__inputContainer label {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    font-weight: 600;
+    color: #292828;
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.signin__input {
+    width: 80%;
+    background: #FFFFFF;
+    outline: none;
+    border: 1px solid #B3ABBC;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    font-weight: 500;
+    color: #292828;
+    height: 40px;
+    padding: 0 1rem;
+    resize: none;
+}
+
+
+.volunteer_auth_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 0.5rem;
+}
+
+.volunteer_auth_btn button {
+    outline: none;
+    width: 150px;
+    height: 42px;
+    border-radius: 50px;
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.signup_btn {
+    background: var(--primary-color);
+    color: var(--bg);
+    border: none;
+}
+
+.login_btn {
+    background: var(--bg);
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+}
+
+.volunteer_auth_btn p {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;  
+    width: 100%;
+    text-align: center;
+    position: relative;
+    color: var(--primary-color);
+}
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+    
+    
+}
+
+
+@media screen and (max-width: 992px) {
+    
+}
+
+@media screen and (max-width: 800px) {
+    .volunteerSignup {
+        height: 100%;
+    }
+    .signin__left{
+        display: none;
+    }
+
+    .signin__right{
+        background: var(--primary-color);
+        flex: 1;
+        padding: 1rem;
+    }
+
+    .signin__right_container {
+        width: 100%;
+        margin: auto;
+    }
+    
+    .signin__right_container h1 {
+        color: #ffffff;
+    }
+
+    .volunteer_input_form {
+        padding: 1rem;
+    }
+
+    .signin__inputContainer {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.2rem;
+        flex-direction: column;
+    }
+
+    .signin__inputContainer label {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+    .signin__input {
+        width: 100%;
+    }
+
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 400px) {
+
+}

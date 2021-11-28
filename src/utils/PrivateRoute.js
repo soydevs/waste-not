@@ -3,7 +3,7 @@ import { Route, Navigate } from 'react-router-dom'
 
 import { AuthContext } from '../context/AuthContext'
 
-const PrivateRoute = ({ element: RouteComponent, ...rest}) => {
+const PrivateRoute = ({children, ...rest}) => {
 
     const { currentUser } = useContext(AuthContext)
 
@@ -12,7 +12,7 @@ const PrivateRoute = ({ element: RouteComponent, ...rest}) => {
     {...rest}
     render={props =>
       currentUser ? (
-        <RouteComponent {...props} />
+        children
       ) : (
         <Navigate
           to={{

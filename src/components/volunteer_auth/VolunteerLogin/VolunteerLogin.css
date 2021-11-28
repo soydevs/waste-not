@@ -1,0 +1,13 @@
+.volunteerLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+@media screen and (max-width: 800px) {
+    .volunteerSignup {
+        height: 100%;
+    }
+}

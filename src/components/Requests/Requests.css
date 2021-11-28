@@ -22,10 +22,12 @@
 }
 
 .requestCard {
-    display: flex;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
     height: 250px;
     margin: 0 50px;
-    gap: 50px;
+    
     align-items: center;
     padding: 30px;
     background: #F3F5F7;
@@ -37,7 +39,7 @@
     font-weight: 600;
     flex-shrink: 0;
     text-decoration: none;
-    margin-bottom: 10px;
+    margin-bottom: 90px;
 }
 
 .requestCard img {

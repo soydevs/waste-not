@@ -3,30 +3,33 @@ import React, { createContext, useState } from "react";
 export const AuthContext = createContext()
 
 function AuthContextProvider(props) {
-    const [currentUser, setCurrentUser] = useState(localStorage.getItem('soydevsUser'))
-    const [name, setName] = useState(localStorage.getItem('soydevsName'))
-    const [token, setToken] = useState(localStorage.getItem('soydevsToken'))
+    const [currentUser, setCurrentUser] = useState(localStorage.getItem('wasteNotUser'))
+    const [name, setName] = useState(localStorage.getItem('wasteNotName'))
+    const [token, setToken] = useState(localStorage.getItem('wasteNotToken'))
+ 
 
     const handleUser = (user) => {
         setCurrentUser(user)
-        localStorage.setItem('soydevsUser', user)
+        localStorage.setItem('wasteNotUser', user)
     }
 
     const handleToken = (token) => {
         setToken(token)
-        localStorage.setItem('soydevsToken', token)
+        localStorage.setItem('wasteNotToken', token)
     }
 
     const handleName = (name) => {
         setName(name)
-        localStorage.setItem('soydevsName', name)
+        localStorage.setItem('wasteNotName', name)
     }
 
 
     const handleLogout = () => {
-        localStorage.removeItem('soydevsUser')
-        localStorage.removeItem('soydevsToken')
-        localStorage.removeItem('soydevsName')        
+        
+        localStorage.removeItem('wasteNotUser')
+        localStorage.removeItem('wasteNotToken')
+        localStorage.removeItem('wasteNotName')        
+   
     }
 
 

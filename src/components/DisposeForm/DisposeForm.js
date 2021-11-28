@@ -7,6 +7,10 @@ export default function DisposeForm({ onClose, onAdd }) {
 
     const handleAdd = async (e) => {
         e.preventDefault()
+        if(!type || !qty || !timeSlot || !description) {
+            alert("Enter all fields!")
+            return;
+        }
         let data={
             type, quantity:qty, availableTime:timeSlot, description, address:'Somewhere under blue sky', pincode:'123456'
         }
@@ -15,9 +19,9 @@ export default function DisposeForm({ onClose, onAdd }) {
         if(res.success) onAdd()
         else alert("Try again!")
     };
-    const [type, setType] = useState('');
+    const [type, setType] = useState('Steel');
     const [qty, setQty] = useState('');
-    const [timeSlot, setTimeSlot] = useState('');
+    const [timeSlot, setTimeSlot] = useState('Morning (9 AM to 12 AM)');
     const [description, setDescription] = useState('');
 
     
@@ -36,7 +40,7 @@ export default function DisposeForm({ onClose, onAdd }) {
             <select onChange={e=> {
                 setType(e.target.children[e.target.selectedIndex].innerHTML)
                 }} >
-              <option>Steel</option>
+              <option selected="selected">Steel</option>
               <option>Electronic</option>
               <option>Organic</option>
               <option>Wood</option>
@@ -52,7 +56,7 @@ export default function DisposeForm({ onClose, onAdd }) {
             <select onChange={e=> {
                 setTimeSlot(e.target.children[e.target.selectedIndex].innerHTML)
                 }} >
-              <option>Morning (9 AM to 12 AM)</option>
+              <option selected="selected">Morning (9 AM to 12 AM)</option>
               <option>Evening (5 PM to 7 PM)</option>
             </select>
           </div>

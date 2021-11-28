@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 import { Home, FourNotFour, Dispose } from "./pages";
-import { Login, Profile, Signup } from "./components";
-import PrivateRoute from "./utils/PrivateRoute";
+import { Login, Profile, Signup, VolunteerLogin, VolunteerSignup } from "./components";
+import VolunteerHome from "./pages/v_home";
 
 function App() {
   return (
@@ -15,6 +15,9 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/dispose' element={<Dispose />} />
           <Route path='/profile' element={<Profile/>} />
+          <Route path='/volunteer/signup' element={<VolunteerSignup/>} />
+          <Route path='/volunteer/login' element={<VolunteerLogin/>} />
+          <Route path='/volunteer/home' element={<VolunteerHome/>} />
           <Route path='*' element={<FourNotFour />} />
         </Routes>
       </Router>
