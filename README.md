@@ -2,6 +2,8 @@
 
 "One man's waste is another man's Treasure.."
 
+[presentation]('https://www.canva.com/design/DAExAB46B-w/share/preview?token=BJGMXYZioFaYB2bn9KkHfg&role=EDITOR&utm_content=DAExAB46B-w&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton')
+
 ## Problem:
 
 - Every household generates organic and inorganic wastes regularly.
