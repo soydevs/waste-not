@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { NavHashLink } from 'react-router-hash-link';
 import { Link, useNavigate } from 'react-router-dom'
-import { AuthContext } from '../../context/AuthContext';
+
 
 import './Navbar.css'
 

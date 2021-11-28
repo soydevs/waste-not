@@ -29,13 +29,17 @@
     overflow-x: hidden;
     padding-bottom: 2rem;
     padding: 0 20px;
-    height: 450px;
+    height: 250px;
      -ms-overflow-style: none;  
     scrollbar-width: none; 
     
 }
 .history__container::-webkit-scrollbar {
     display: none;
+}
+
+.history__container > h1 {
+    color: black;
 }
 
 .historyCard {

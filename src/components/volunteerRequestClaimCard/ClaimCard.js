@@ -2,57 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Navbar } from '..';
 import { AuthContext } from '../../context/AuthContext';
 import requestHandler from '../../hooks/requestHandler';
+import {images} from '../../utils/data';
 import './ClaimCard.css'
 const sample = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/unicorn.jpg"
 
-const cards = [
-    {
-        id: 1,
-        title: 'Kuttanad',
-        subtitle: 'Backwater',
-        amount:'Rs 200',
-        date:'20/3/2021',
-        saved:'150 X 5kg = Rs 750',
-        image: sample
-    },
-    {
-        id: 2,
-        title: 'Jaipur',
-        subtitle: 'Ride',
-        amount:'Rs 200',
-        date:'20/3/2021',
-        saved:'150 X 5kg = Rs 750',
-        image: sample
-    },
-    {
-        id: 3,
-        title: 'Agra',
-        subtitle: 'Historic',
-        amount:'Rs 200',
-        date:'20/3/2021',
-        saved:'150 X 5kg = Rs 750',
-        image: sample
-    },
-    {
-        id: 4,
-        title: 'Chennai',
-        subtitle: 'Place',
-        amount:'Rs 200',
-        date:'20/3/2021',
-        saved:'150 X 5kg = Rs 750',
-        image: sample
-    },
-    {
-        id: 5,
-        title: 'Rajasthan',
-        subtitle: 'Place',
-        amount:'Rs 200',
-        date:'20/3/2021',
-        saved:'150 X 5kg = Rs 750',
-        image: sample
-    },
-    
-]
 
 function ClaimCard() {
     const { token }  = useContext(AuthContext);
@@ -101,19 +54,19 @@ function ClaimCard() {
                 <h1>Available Requests</h1>
 
                 <div className="claim__card____container">
-                    {available.map((exp, i) => (
+                    {available.length ? available.map((exp, i) => (
                         <div className="claim__card__Card" key={exp.id}>
-                            <img src={sample} alt="" />
+                            <img src={images[exp.type.toLowerCase()]?images[exp.type.toLowerCase()]:sample} alt="" />
                             <div>
                                 <h3>{exp.type}</h3>
                                 <p><span>Qty: </span>{exp.quantity}</p>
                                 <p><span>Amount: </span>{exp.price}</p>
-                                <p><span>Date Sold: </span>{Date(exp.createdAt).split(' GMT')[0]}</p>
-                                <p><span>Total Saved: </span>Rs 700</p>
+                                <p><span>Date of Req: </span>{Date(exp.createdAt).split(' GMT')[0]}</p>
+                                <p><span>Phone: </span>{exp.user.phone}</p>
                                 <button className="claim__button" onClick={handleClaim(i)}>Claim</button>
                             </div>
                         </div>
-                    ))}
+                    )) : <h1>No requests found! Try again later</h1>}
                 </div>
             </div>
             <div className="claim__card__">
@@ -122,13 +75,13 @@ function ClaimCard() {
             <div className="claim__card____container">
                 {accepted.map((exp, i) => (
                     <div className="claim__card__Card" key={exp.id}>
-                        <img src={sample} alt="" />
+                        <img src={images[exp.type.toLowerCase()]?images[exp.type.toLowerCase()]:sample} alt="" />
                         <div>
                             <h3>{exp.type}</h3>
                             <p><span>Qty: </span>{exp.quantity}</p>
                             <p><span>Amount: </span>{exp.price}</p>
-                            <p><span>Date Sold: </span>{Date(exp.createdAt).split(' GMT')[0]}</p>
-                            <p><span>Total Saved: </span>Rs 700</p>
+                            <p><span>Date of Req: </span>{Date(exp.createdAt).split(' GMT')[0]}</p>
+                            <p><span>Phone: </span>{exp.user.phone}</p>
                            
                         </div>
                     </div>
